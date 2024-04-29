@@ -30,6 +30,20 @@
   scroll-behavior: smooth;
 }
 
+
+/* Estilos por defecto para pantallas grandes (PC) */
+.brand-name {
+  content: "Morgan & Morgan";
+}
+
+/* Estilos para pantallas menores de 768px (celulares) */
+@media (max-width: 768px) {
+  .brand-name {
+      content: "M&M";
+  }
+}
+
+
 /* wHATSAPP */
 
 .float{

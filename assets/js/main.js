@@ -4,6 +4,21 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var brandName = document.querySelector('.brand-name');
+  function updateBrandText() {
+      if (window.innerWidth < 768) {
+          brandName.textContent = 'M&M';
+      } else {
+          brandName.textContent = 'Morgan & Morgan';
+      }
+  }
+  updateBrandText();
+  window.onresize = updateBrandText;
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 

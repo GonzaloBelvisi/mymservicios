@@ -19,6 +19,23 @@ document.addEventListener("DOMContentLoaded", function() {
   window.onresize = updateBrandText;
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.portfolio-flters li');
+  const projectDetails = document.getElementById('project-details');
+
+  filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+          if (this.getAttribute('data-filter') === '.filter-construction') {
+              projectDetails.style.display = 'block'; // Mostrar la sección cuando se selecciona UPM 2
+          } else {
+              projectDetails.style.display = 'none'; // Ocultar para cualquier otro filtro
+          }
+      });
+  });
+});
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
@@ -109,8 +126,12 @@ document.addEventListener('DOMContentLoaded', () => {
    * Initiate glightbox
    */
   const glightbox = GLightbox({
-    selector: '.glightbox'
+    selector: '.glightbox',
+    captionsData: 'none'
   });
+
+
+
 
   /**
    * Porfolio isotope and filter

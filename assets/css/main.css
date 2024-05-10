@@ -44,6 +44,16 @@
 }
 
 
+.glightbox-desc, .gslide-description {
+  display: none !important;
+}
+
+
+#project-details {
+  display: none;
+}
+
+
 /* wHATSAPP */
 
 .float{
@@ -1583,6 +1593,7 @@ section {
   height: 100%;
   margin-bottom: 50px;
 }
+
 
 .project-details .portfolio-description .testimonial-item .testimonial-img {
   width: 90px;

@@ -21,14 +21,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   const filterButtons = document.querySelectorAll('.portfolio-flters li');
-  const projectDetails = document.getElementById('project-details');
+  const projectDetailsUPM = document.getElementById('project-details-upm');  // Asegúrate de usar el ID correcto para UPM 2
+  const projectDetailsANCAP = document.getElementById('project-details-ancap');  // Asegúrate de usar el ID correcto para ANCAP
 
   filterButtons.forEach(button => {
       button.addEventListener('click', function() {
-          if (this.getAttribute('data-filter') === '.filter-construction') {
-              projectDetails.style.display = 'block'; // Mostrar la sección cuando se selecciona UPM 2
+          const filter = this.getAttribute('data-filter');
+          if (filter === '.filter-construction') {
+              projectDetailsUPM.style.display = 'block';
+              projectDetailsANCAP.style.display = 'none';
+          } else if (filter === '.filter-remodeling') {
+              projectDetailsUPM.style.display = 'none';
+              projectDetailsANCAP.style.display = 'block';
           } else {
-              projectDetails.style.display = 'none'; // Ocultar para cualquier otro filtro
+              projectDetailsUPM.style.display = 'none';
+              projectDetailsANCAP.style.display = 'none';
           }
       });
   });

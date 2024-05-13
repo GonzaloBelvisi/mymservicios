@@ -49,9 +49,15 @@
 }
 
 
-#project-details {
+#project-details-upm {
   display: none;
 }
+
+#project-details-ancap {
+  display: none;
+}
+
+
 
 
 /* wHATSAPP */

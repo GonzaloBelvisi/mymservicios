@@ -21,8 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   const filterButtons = document.querySelectorAll('.portfolio-flters li');
-  const projectDetailsUPM = document.getElementById('project-details-upm');  // Asegúrate de usar el ID correcto para UPM 2
-  const projectDetailsANCAP = document.getElementById('project-details-ancap');  // Asegúrate de usar el ID correcto para ANCAP
+  const projectDetailsUPM = document.getElementById('project-details-upm');
+  const projectDetailsANCAP = document.getElementById('project-details-ancap');
+  const projectDetailsMDP = document.getElementById('project-details-mdp'); // ID para Montes del Plata
 
   filterButtons.forEach(button => {
       button.addEventListener('click', function() {
@@ -30,16 +31,24 @@ document.addEventListener('DOMContentLoaded', function() {
           if (filter === '.filter-construction') {
               projectDetailsUPM.style.display = 'block';
               projectDetailsANCAP.style.display = 'none';
+              projectDetailsMDP.style.display = 'none';
           } else if (filter === '.filter-remodeling') {
               projectDetailsUPM.style.display = 'none';
               projectDetailsANCAP.style.display = 'block';
+              projectDetailsMDP.style.display = 'none';
+          } else if (filter === '.filter-repairs') {
+              projectDetailsUPM.style.display = 'none';
+              projectDetailsANCAP.style.display = 'none';
+              projectDetailsMDP.style.display = 'block';
           } else {
               projectDetailsUPM.style.display = 'none';
               projectDetailsANCAP.style.display = 'none';
+              projectDetailsMDP.style.display = 'none';
           }
       });
   });
 });
+
 
 
 
